@@ -18,8 +18,8 @@ ticker = "TCS.NS"  # TCS stock ticker on NSE (National Stock Exchange of India)
 data = yf.download(ticker, start="2023-01-01", end="2023-06-29") # Adjust date range as needed
 
 # Step 2: Calculate short-term (20 days) and long-term (100 days) EWMA
-data['EWMA_short'] = data['Close'].ewm(span=20, adjust=False).mean()
-data['EWMA_long'] = data['Close'].ewm(span=100, adjust=False).mean()
+data['EWMA_short'] = data['Close'].ewm(span=20, adjust=True).mean()
+data['EWMA_long'] = data['Close'].ewm(span=100, adjust=True).mean()
 
 # Step 3: Plotting
 plt.figure(figsize=(14, 7))
@@ -42,8 +42,8 @@ ticker = "MRF.NS"  # TCS stock ticker on NSE (National Stock Exchange of India)
 data = yf.download(ticker, start="2023-01-01", end="2023-06-29")   # Adjust date range as needed
 
 # Step 2: Calculate short-term (20 days) and long-term (100 days) EWMA
-data['EWMA_short'] = data['Close'].ewm(span=20, adjust=False).mean()
-data['EWMA_long'] = data['Close'].ewm(span=100, adjust=False).mean()
+data['EWMA_short'] = data['Close'].ewm(span=20, adjust=True).mean()
+data['EWMA_long'] = data['Close'].ewm(span=100, adjust=True).mean()
 
 # Step 3: Plotting
 plt.figure(figsize=(14, 7))
